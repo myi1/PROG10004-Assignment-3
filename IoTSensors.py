@@ -38,3 +38,6 @@ class IoTSensors:
 
     def computeAvg(self):
         return
+
+    # def __str__(self):
+    #     return 'x:{0}\ny:{1}\n'
