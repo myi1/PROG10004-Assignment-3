@@ -6,9 +6,9 @@ class Co2Sensors(IoTSensors):
 
     def __init__(self):
         super.__init__()
-        self._co2Levels = 0
+        self._co2Levels = []
 
-    def getco2Levels(self):
+    def getCo2Levels(self):
         return self._co2Levels
 
     def setCo2Levels(self, newCo2Levels):
@@ -22,4 +22,9 @@ class Co2Sensors(IoTSensors):
         dayReading = input(
             'Enter the CO2 Reading (PPM) for Day {0}'.format(sensorNum))
         if dayReading.isdigit():
-            self.setCo2Levels(int(dayReading))
+            co2Levels = self.getCo2Levels()
+            co2Levels.append(dayReading)
+            self.setCo2Levels(co2Levels)
+
+    def computeAvg(self, listReadings):
+        self.setAvgRead(format((sum(listReadings) / len(listReadings)), '.2f'))
