@@ -1,0 +1,2 @@
+class IoTSensors:
+    pass
