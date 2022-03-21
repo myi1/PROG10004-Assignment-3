@@ -29,3 +29,12 @@ class IoTSensors:
 
     def setAvgRead(self, newAvgRead):
         self._avgRead = newAvgRead
+
+    def sensorPos(self):
+        return
+
+    def sensorReadings(self):
+        return
+
+    def computeAvg(self):
+        return
