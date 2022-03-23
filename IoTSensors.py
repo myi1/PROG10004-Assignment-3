@@ -1,11 +1,12 @@
 class IoTSensors:
-
+    # Define IoTSensors class which is a general sensor class
     def __init__(self):
         self._posX = 0
         self._posY = 0
         self._noDays = 0
         self._avgRead = 0
 
+    # Accessor Methods
     def getPosX(self):
         return self._posX
 
@@ -18,6 +19,7 @@ class IoTSensors:
     def getAvgRead(self):
         return self._avgRead
 
+    # Mutator Methods
     def setPosX(self, newPosX):
         self._posX = newPosX
 
@@ -30,6 +32,7 @@ class IoTSensors:
     def setAvgRead(self, newAvgRead):
         self._avgRead = newAvgRead
 
+    # Other Methods
     def sensorPos(self):
         return
 
@@ -38,6 +41,3 @@ class IoTSensors:
 
     def computeAvg(self):
         return
-
-    # def __str__(self):
-    #     return 'x:{0}\ny:{1}\n'
